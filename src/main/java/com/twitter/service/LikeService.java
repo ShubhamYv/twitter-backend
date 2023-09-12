@@ -12,5 +12,7 @@ public interface LikeService {
 	Like likeTweets(Long tweetId, User user) throws UserException, TweetException;
 
 	List<Like> getAllLikes(Long tweetid) throws TweetException;
+	
+	
 
 }
