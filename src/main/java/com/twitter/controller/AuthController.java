@@ -1,6 +1,5 @@
 package com.twitter.controller;
 
-import org.apache.catalina.authenticator.SpnegoAuthenticator.AuthenticateAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +20,7 @@ import com.twitter.model.User;
 import com.twitter.model.Verification;
 import com.twitter.repository.UserRepository;
 import com.twitter.response.AuthResponse;
-import com.twitter.service.CustomUserDetailsServiceImplementation;
+import com.twitter.service.impl.CustomUserDetailsServiceImplementation;
 
 @RestController
 @RequestMapping("/auth")
