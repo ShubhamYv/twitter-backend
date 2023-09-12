@@ -34,12 +34,12 @@ public class TweetDtoMapper {
 		tweetDto.setLiked(isLiked);
 		tweetDto.setRetweet(isRetweeted);
 		tweetDto.setRetweetUsersId(retweetUserId);
-		tweetDto.setReplyTweets(toTwitDtos(tweet.getReplyTweets(), reqUser));
+		tweetDto.setReplyTweets(toTweetDtos(tweet.getReplyTweets(), reqUser));
 		tweetDto.setVideo(tweet.getVideo());
 		return tweetDto;
 	}
 
-	public static List<TweetDto> toTwitDtos(List<Tweet> tweets, User reqUser) {
+	public static List<TweetDto> toTweetDtos(List<Tweet> tweets, User reqUser) {
 		List<TweetDto> tweetDtos = new ArrayList<>();
 		for (Tweet tweet : tweets) {
 			TweetDto tweetDto = toReplyTweetDto(tweet, reqUser);
