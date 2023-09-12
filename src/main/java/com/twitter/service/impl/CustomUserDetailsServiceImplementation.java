@@ -1,4 +1,4 @@
-package com.twitter.service;
+package com.twitter.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;

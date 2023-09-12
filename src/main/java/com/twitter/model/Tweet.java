@@ -1,5 +1,6 @@
 package com.twitter.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,15 +34,15 @@ public class Tweet {
 	private List<Like> likes = new ArrayList<>();
 
 	@OneToMany
-	private List<Like> replyTweets = new ArrayList<>();
+	private List<Tweet> replyTweets = new ArrayList<>();
 
 	@ManyToMany
-	private List<User> retweet = new ArrayList<>();
+	private List<User> retweetUser = new ArrayList<>();
 
 	@ManyToOne
 	private Tweet replyFor;
 
 	private boolean isReply;
-
 	private boolean isTweet;
+	private LocalDateTime createdAt;
 }
